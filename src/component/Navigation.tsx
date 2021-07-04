@@ -1,31 +1,34 @@
+import NavLink from './link/NavLink'
+import ButtonLink from './link/ButtonLink'
 export default function Navigation() {
   return (
     <div>
       <div>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href='#'>
           <img src='#' alt='logo' />
         </a>
       </div>
       <div>
         <div>
-          <a href=''>Features</a>
+          <NavLink content='Features' href='#' />
         </div>
         <div>
-          <a href=''>Pricing</a>
+          <NavLink content='Pricing' href='#' />
         </div>
         <div>
-          <a href=''>Community</a>
+          <NavLink content='Community' href='#' />
         </div>
         <div>
-          <a href=''>Support</a>
+          <NavLink content='Support' href='#' />
         </div>
       </div>
       <div>
         <div>
-          <a href=''>Log in</a>
+          <ButtonLink content='Log in' href='#' color='light' />
         </div>
         <div>
-          <a href=''>Register</a>
+          <ButtonLink content='Register' href='#' color='primary' />
         </div>
       </div>
     </div>
