@@ -24,12 +24,8 @@ export default function Navigation() {
         </div>
       </div>
       <div>
-        <div>
-          <ButtonLink content='Log in' href='#' color='light' />
-        </div>
-        <div>
-          <ButtonLink content='Register' href='#' color='primary' />
-        </div>
+        <ButtonLink content='Log in' href='#' color='light' />
+        <ButtonLink content='Register' href='#' color='primary' />
       </div>
     </div>
   )

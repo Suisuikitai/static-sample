@@ -1,30 +1,42 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 interface Props {
   content: string
   href: string
   color: string
 }
 type StringKeyStringVal = {
-  [key: string]: { [key: string]: string }
+  [key: string]: { [key: string]: { [key: string]: string } }
 }
 const COLOR: StringKeyStringVal = {
-  primary: { 'background-color': '#18A0FB', color: '#FFFFFF' },
-  light: { 'background-color': '#FFFFFF', color: '#18A0FB' },
+  primary: { div: { color: '#18A0FB' }, a: { color: '#FFFFFF' } },
+  light: { div: { color: '#FFFFFF' }, a: { color: '#18A0FB' } },
 }
-const Style = css`
-  font-size: 15px;
+const DIV = styled.div`
   height: 40px;
   width: 130px;
+  background-color: ${(props) => props.color};
+  border: 0.1px solid #18a0fb;
+  border-radius: 6px;
+  padding-top: 10px;
+`
+const A = styled.a.attrs((props) => ({
+  href: props.href,
+}))`
+  font-family: 'Montserrat';
+  font-weight: Medium;
+  font-size: 15px;
+  color: ${(props) => props.color};
+  text-decoration: none;
 `
 const ButtonLink = (props: Props) => {
   const color = COLOR[props.color]
-  const A = styled.a.attrs({
-    href: props.href,
-  })`
-    ${Style}
-    ${color}
-  `
-  return <A>{props.content}</A>
+  return (
+    <DIV {...color['div']}>
+      <A {...color['a']} href={props.href}>
+        {props.content}
+      </A>
+    </DIV>
+  )
 }
 
 export default ButtonLink
