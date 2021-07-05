@@ -7,6 +7,9 @@ interface Props {
 type StringKeyStringVal = {
   [key: string]: { [key: string]: { [key: string]: string } }
 }
+//普通にifで分岐させたらいい気がしてきた
+//パフォーマンス大丈夫か？
+//(primary && stylePrimary) || (light && styleLight)
 const COLOR: StringKeyStringVal = {
   primary: { div: { color: '#18A0FB' }, a: { color: '#FFFFFF' } },
   light: { div: { color: '#FFFFFF' }, a: { color: '#18A0FB' } },
