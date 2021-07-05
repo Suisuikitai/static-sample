@@ -5,19 +5,25 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
 `
 
 const FlexLink = styled.div`
   display: flex;
   justify-content: center;
-  text-align: center;
   margin: 0 20px;
+`
+
+const FlexPageWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 45px;
+  align-items: center;
+  text-align: center;
 `
 
 export default function Navigation() {
   return (
-    <Container style={{ padding: '0 70px' }}>
+    <FlexPageWrapper>
       <Container>
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href='#'>
@@ -46,6 +52,6 @@ export default function Navigation() {
           <ButtonLink content='Register' href='#' color='primary' />
         </div>
       </Container>
-    </Container>
+    </FlexPageWrapper>
   )
 }
