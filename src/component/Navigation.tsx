@@ -8,6 +8,13 @@ const Container = styled.div`
   align-items: center;
 `
 
+const FlexLink = styled.div`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 20px;
+`
+
 export default function Navigation() {
   return (
     <Container style={{ padding: '0 70px' }}>
@@ -16,19 +23,19 @@ export default function Navigation() {
         <a href='#'>
           <img src='#' alt='logo' />
         </a>
-        <Container style={{ marginLeft: '70px' }}>
-          <div>
+        <Container style={{ marginLeft: '50px' }}>
+          <FlexLink>
             <NavLink content='Features' href='#' />
-          </div>
-          <div>
+          </FlexLink>
+          <FlexLink>
             <NavLink content='Pricing' href='#' />
-          </div>
-          <div>
+          </FlexLink>
+          <FlexLink>
             <NavLink content='Community' href='#' />
-          </div>
-          <div>
+          </FlexLink>
+          <FlexLink>
             <NavLink content='Support' href='#' />
-          </div>
+          </FlexLink>
         </Container>
       </Container>
       <Container>

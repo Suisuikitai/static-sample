@@ -25,7 +25,6 @@ const DIV = styled.div`
 const A = styled.a.attrs((props) => ({
   href: props.href,
 }))`
-  font-family: 'Montserrat';
   font-weight: Medium;
   font-size: 15px;
   color: ${(props) => props.color};
