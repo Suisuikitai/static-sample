@@ -5,6 +5,7 @@ type Props = {
 }
 
 const P = styled.p`
+  padding: 0 80px;
   text-align: center;
   font-size: 32px;
   width: 1392px;
