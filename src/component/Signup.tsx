@@ -1,6 +1,7 @@
 import { BoldH4 } from './text/BoldH4'
 import { BodyPLarge } from './text/BodyPLarge'
 import { SubPageH1 } from './text/SubPageH1'
+import { PlainInputText } from './input/PlaneText'
 import styled from 'styled-components'
 
 const SignUpBox = styled.div`
@@ -41,8 +42,37 @@ export default function Signup() {
             justifyContent: 'center',
           }}
         >
-          <div style={{ border: 'solid green 1px', flexBasis: '650px' }}>
-            <BoldH4 content={'Sing up for a free account'}></BoldH4>
+          <div
+            style={{
+              border: 'solid green 1px',
+              flexBasis: '622px',
+              height: '439px',
+              padding: '45px 40px',
+            }}
+          >
+            {/* htmlの要素としてタグ相当のものをComponentとして切り出すしてレイアウトを無視して大まか配置する
+              大まかな配置から明らかにずれているところをhtmlの要素で修正
+              それでもずれている所をcssで修正っていう流れが良さそう
+            */}
+            <div>
+              <BoldH4 content={'Sing up for a free account'}></BoldH4>
+              <form action='' method='post'>
+                <div style={{ textAlign: 'left', display: 'flex' }}>
+                  <div>
+                    <PlainInputText placeholder='First name' />
+                  </div>
+                  <div>
+                    <PlainInputText placeholder='Last name' />
+                  </div>
+                </div>
+                <div>
+                  <PlainInputText placeholder='Email address'></PlainInputText>
+                </div>
+                <div>
+                  <PlainInputText placeholder='Create password'></PlainInputText>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
