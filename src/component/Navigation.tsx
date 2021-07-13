@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Signup from './Signup'
 import NavLink from './link/NavLink'
-import ButtonLink from './link/ButtonLink'
+import { ButtonLink } from './link/ButtonLink'
 
 const BetweenBox = styled.div`
   display: flex;

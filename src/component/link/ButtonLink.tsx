@@ -41,4 +41,4 @@ const ButtonLink = (props: Props) => {
   )
 }
 
-export default ButtonLink
+export { ButtonLink }

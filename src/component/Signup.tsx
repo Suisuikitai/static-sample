@@ -2,6 +2,7 @@ import { BoldH4 } from './text/BoldH4'
 import { BodyPLarge } from './text/BodyPLarge'
 import { SubPageH1 } from './text/SubPageH1'
 import { PlainInputText } from './input/PlaneText'
+// import { ButtonLink, COLOR } from './link/ButtonLink'
 import styled from 'styled-components'
 
 const SignUpBox = styled.div`
@@ -45,9 +46,9 @@ export default function Signup() {
           <div
             style={{
               border: 'solid green 1px',
-              flexBasis: '622px',
+              flexBasis: '607px',
               height: '439px',
-              padding: '45px 40px',
+              padding: '45px 60px',
             }}
           >
             {/* htmlの要素としてタグ相当のものをComponentとして切り出すしてレイアウトを無視して大まか配置する
@@ -57,11 +58,17 @@ export default function Signup() {
             <div>
               <BoldH4 content={'Sing up for a free account'}></BoldH4>
               <form action='' method='post'>
-                <div style={{ textAlign: 'left', display: 'flex' }}>
-                  <div>
+                <div
+                  style={{
+                    marginTop: '40px',
+                    textAlign: 'left',
+                    display: 'flex',
+                  }}
+                >
+                  <div style={{ paddingRight: '10.9px' }}>
                     <PlainInputText placeholder='First name' />
                   </div>
-                  <div>
+                  <div style={{ paddingLeft: '10.9px' }}>
                     <PlainInputText placeholder='Last name' />
                   </div>
                 </div>
@@ -70,6 +77,19 @@ export default function Signup() {
                 </div>
                 <div>
                   <PlainInputText placeholder='Create password'></PlainInputText>
+                </div>
+                <div>
+                  {/* やっぱこれ使いづらい気がする */}
+                  {/* どういうコンポーネントが使いやすいか考える */}
+                  {/* <ButtonLink color={'primary'} /> */}
+                  <input
+                    type='text'
+                    style={{
+                      border: 'solid black',
+                      width: '231.8px',
+                      padding: '10px',
+                    }}
+                  />
                 </div>
               </form>
             </div>
