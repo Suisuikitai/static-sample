@@ -2,7 +2,7 @@ import { BoldH4 } from './text/BoldH4'
 import { BodyPLarge } from './text/BodyPLarge'
 import { SubPageH1 } from './text/SubPageH1'
 import { PlainInputText } from './input/PlaneText'
-// import { ButtonLink, COLOR } from './link/ButtonLink'
+import { ButtonLink } from './link/ButtonLink'
 import styled from 'styled-components'
 
 const SignUpBox = styled.div`
@@ -65,30 +65,24 @@ export default function Signup() {
                     display: 'flex',
                   }}
                 >
-                  <div style={{ paddingRight: '10.9px' }}>
+                  <div style={{ paddingRight: '10.9px', width: '100%' }}>
                     <PlainInputText placeholder='First name' />
                   </div>
-                  <div style={{ paddingLeft: '10.9px' }}>
+                  <div style={{ paddingLeft: '10.9px', width: '100%' }}>
                     <PlainInputText placeholder='Last name' />
                   </div>
                 </div>
-                <div>
+                <div style={{ marginTop: '25px' }}>
                   <PlainInputText placeholder='Email address'></PlainInputText>
                 </div>
-                <div>
+                <div style={{ marginTop: '25px' }}>
                   <PlainInputText placeholder='Create password'></PlainInputText>
                 </div>
-                <div>
-                  {/* やっぱこれ使いづらい気がする */}
-                  {/* どういうコンポーネントが使いやすいか考える */}
-                  {/* <ButtonLink color={'primary'} /> */}
-                  <input
-                    type='text'
-                    style={{
-                      border: 'solid black',
-                      width: '231.8px',
-                      padding: '10px',
-                    }}
+                <div style={{ marginTop: '25px' }}>
+                  <ButtonLink
+                    color={'primary'}
+                    content={'Register'}
+                    href={''}
                   />
                 </div>
               </form>

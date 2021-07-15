@@ -9,7 +9,8 @@ const Input = styled.input.attrs((props: Props) => ({
   border: solid 1px;
   height: 40px;
   padding: 10px;
-  width: 231.28px;
+  /* width: 231.28px; */
+  width: 100%;
   ::placeholder {
     text-align: left;
   }
