@@ -3,13 +3,6 @@ import { BodyPLarge } from './text/BodyPLarge'
 import { SubPageH1 } from './text/SubPageH1'
 import { PlainInputText } from './input/PlaneText'
 import { ButtonLink } from './link/ButtonLink'
-import styled from 'styled-components'
-
-const SignUpBox = styled.div`
-  border: solid #33f4f4 1px;
-  display: flex;
-  justify-content: center;
-`
 
 export default function Signup() {
   return (

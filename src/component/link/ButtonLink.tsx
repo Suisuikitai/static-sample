@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 interface Props {
   content: string
   href: string
@@ -22,9 +23,7 @@ const DIV = styled.div`
   border-radius: 6px;
   padding-top: 10px;
 `
-const A = styled.a.attrs((props) => ({
-  href: props.href,
-}))`
+const A = styled(Link)`
   font-weight: Medium;
   font-size: 15px;
   color: ${(props) => props.color};
@@ -34,7 +33,7 @@ const ButtonLink = (props: Props) => {
   const color = COLOR[props.color]
   return (
     <DIV {...color['div']}>
-      <A {...color['a']} href={props.href}>
+      <A {...color['a']} to={props.href}>
         {props.content}
       </A>
     </DIV>
